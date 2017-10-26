@@ -1,0 +1,35 @@
+{
+  "name": "gulp-awaitify",
+  "version": "1.0.0",
+  "description": "Gulp plugin to add await keyword to certain function calls in .js files",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha *.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlindhol/gulp-awaitify.git"
+  },
+  "keywords": [
+    "gulp",
+    "await",
+    "async",
+    "code-transform"
+  ],
+  "author": "Ville Lindholm <ville.lindholm@iki.fi>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vlindhol/gulp-awaitify/issues"
+  },
+  "homepage": "https://github.com/vlindhol/gulp-awaitify#readme",
+  "dependencies": {
+    "node-awaitify": "1.0.2",
+    "through2": "2.0.3"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "event-stream": "3.3.4",
+    "mocha": "4.0.1",
+    "vinyl": "2.1.0"
+  }
+}
