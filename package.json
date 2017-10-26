@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/vlindhol/gulp-awaitify#readme",
   "dependencies": {
+    "gulp-util": "3.0.8",
     "node-awaitify": "1.0.2",
     "through2": "2.0.3"
   },

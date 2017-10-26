@@ -33,5 +33,27 @@ describe('gulp-awaitify', function() {
         done();
       });
     });
+
+    it('should return error on non-javascript code', function(done) {
+      const code = 'This is not even code.';
+      // create the fake file
+      var fakeFile = new File({
+        contents: new Buffer(code, 'utf8'),
+      });
+
+      // Create an awaitify plugin stream
+      var plugin = awaitify(['target']);
+
+      // wait for the file to come back out
+      plugin.once('error', function(err) {
+        chai.expect(err.message.startsWith('Could not parse code')).to.be.true;
+        chai.expect(err.plugin).to.equal('gulp-awaitify');
+        done();
+      });
+
+      // write the fake file to it
+      plugin.write(fakeFile);
+      throw new Error('Should not get to here');
+    });
   });
 });
